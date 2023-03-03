@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mezcal Brand Name</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div id="age-verification-modal" class="modal">
+      <div class="modal-content">
+        <h3>Are you of legal drinking age?</h3>
+        <p>You must be of legal drinking age to enter this site.</p>
+        <button id="yes-button">Yes</button>
+        <button id="no-button">No</button>
+      </div>
+    </div>    
     <header>
       <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container">

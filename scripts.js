@@ -1,3 +1,25 @@
+$(document).ready(function() {
+  // Check if user has already answered
+  var ageVerified = $.cookie('age-verified');
+  if (!ageVerified) {
+    // Show modal
+    $('#age-verification-modal').show();
+  }
+});
+
+// Handle button clicks
+$('#yes-button').click(function() {
+  // Set cookie to remember user has been verified
+  $.cookie('age-verified', 'true', { expires: 365 });
+  // Hide modal
+  $('#age-verification-modal').hide();
+});
+
+$('#no-button').click(function() {
+  // Redirect user to non-alcoholic website
+  window.location.replace("https://www.example.com/non-alcoholic");
+});
+
 // Smooth scrolling for navbar links
 $(document).ready(function() {
     $('a.nav-link').on('click', function(event) {
