@@ -70,18 +70,14 @@ $(document).ready(function() {
     });
   });
   
-  // Show/hide back-to-top button
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.back-to-top').fadeIn();
-    } else {
-      $('.back-to-top').fadeOut();
-    }
-  });
-  
-  // Smooth scrolling for back-to-top button
-  $(document).on('click', '.back-to-top', function() {
-    $('html, body').animate({ scrollTop: 0 }, 800);
-    return false;
-  });
-  
+// scroll to top functionality
+const scrollUp = document.querySelector("#scroll-up");
+
+scrollUp.addEventListener("click", () => {
+	window.scrollTo({
+		top: 0,
+		left: 0,
+		behavior: "smooth",
+	});
+});
+
